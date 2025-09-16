@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thuvien>
+    <sach>
+        <title>Tôi Thấy Hoa Vàng Trên Cỏ Xanh</title>
+        <author>Nguyễn Nhật Ánh</author>
+        <year>2010</year>
+        <genre>Tiểu thuyết</genre>
+    </sach>
+    
+    <sach>
+        <title>Đắc Nhân Tâm</title>
+        <author>Dale Carnegie</author>
+        <year>1936</year>
+        <genre>Kỹ năng sống</genre>
+    </sach>
+    
+    <sach>
+        <title>Nhà Giả Kim</title>
+        <author>Paulo Coelho</author>
+        <year>1988</year>
+        <genre>Triết học</genre>
+    </sach>
+    
+    <sach>
+        <title>Lập Trình Java Cơ Bản</title>
+        <author>Phạm Văn At</author>
+        <year>2020</year>
+        <genre>Công nghệ thông tin</genre>
+    </sach>
+</thuvien>
