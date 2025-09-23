@@ -1,0 +1,25 @@
+<!-- DTD cho bệnh viện -->
+<!ELEMENT hospital (appointment+)>
+<!ELEMENT appointment (patient, doctor, diagnosis, treatment, fee)>
+<!ATTLIST appointment 
+    id CDATA #REQUIRED
+    date CDATA #REQUIRED
+    status CDATA #REQUIRED>
+
+<!-- Patient elements -->
+<!ELEMENT patient (name, dob, phone, address)>
+<!ATTLIST patient id CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+<!-- Doctor elements -->
+<!ELEMENT doctor (name, specialty, phone)>
+<!ATTLIST doctor id CDATA #REQUIRED>
+<!ELEMENT specialty (#PCDATA)>
+
+<!-- Appointment details -->
+<!ELEMENT diagnosis (#PCDATA)>
+<!ELEMENT treatment (#PCDATA)>
+<!ELEMENT fee (#PCDATA)>

@@ -1,0 +1,20 @@
+<!-- DTD cho đơn hàng -->
+<!ELEMENT orders (order+)>
+<!ELEMENT order (item+, total_amount, payment_method)>
+<!ATTLIST order 
+    id CDATA #REQUIRED
+    customer CDATA #REQUIRED
+    date CDATA #REQUIRED>
+
+<!-- Item elements -->
+<!ELEMENT item (name, description)>
+<!ATTLIST item 
+    id CDATA #REQUIRED
+    quantity CDATA #REQUIRED
+    price CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+<!-- Order details -->
+<!ELEMENT total_amount (#PCDATA)>
+<!ELEMENT payment_method (#PCDATA)>

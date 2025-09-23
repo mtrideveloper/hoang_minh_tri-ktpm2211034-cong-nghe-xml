@@ -1,0 +1,10 @@
+<!-- DTD cho nhân sự -->
+<!ELEMENT company (department+)>
+<!ELEMENT department (employee+)>
+<!ATTLIST department name CDATA #REQUIRED>
+
+<!-- Employee elements -->
+<!ELEMENT employee (name, position)>
+<!ATTLIST employee id CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT position (#PCDATA)>

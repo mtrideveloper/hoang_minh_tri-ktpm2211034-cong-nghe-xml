@@ -1,0 +1,11 @@
+<!-- DTD cho sinh viên -->
+<!ELEMENT lophoc (sinhvien+)>
+<!ELEMENT sinhvien (n, id, subjects)>
+<!ELEMENT n (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+
+<!-- Subjects section -->
+<!ELEMENT subjects (subject+)>
+<!ELEMENT subject (subject_name, score)>
+<!ELEMENT subject_name (#PCDATA)>
+<!ELEMENT score (#PCDATA)>

@@ -1,0 +1,12 @@
+<!-- DTD cho sản phẩm -->
+<!ELEMENT cuahang (sanpham+)>
+<!ELEMENT sanpham (ten, mota, hangsx)>
+<!ATTLIST sanpham 
+    id CDATA #REQUIRED
+    category CDATA #REQUIRED
+    price CDATA #REQUIRED
+    currency CDATA #REQUIRED>
+
+<!ELEMENT ten (#PCDATA)>
+<!ELEMENT mota (#PCDATA)>
+<!ELEMENT hangsx (#PCDATA)>
