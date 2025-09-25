@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<company xmlns:hr="http://company.com/hr" xmlns:dep="http://company.com/department">
-    <dep:department name="Kế toán">
-        <hr:employee id="E001">
-            <hr:name>Nguyễn Văn A</hr:name>
-            <hr:position>Kế toán trưởng</hr:position>
-        </hr:employee>
-        <hr:employee id="E002">
-            <hr:name>Trần Thị B</hr:name>
-            <hr:position>Nhân viên kế toán</hr:position>
-        </hr:employee>
-    </dep:department>
+<!DOCTYPE company SYSTEM "nhansu.dtd">
+<company>
+    <department name="Kế toán">
+        <employee id="E001">
+            <name>Nguyễn Văn A</name>
+            <position>Kế toán trưởng</position>
+        </employee>
+        <employee id="E002">
+            <name>Trần Thị B</name>
+            <position>Nhân viên kế toán</position>
+        </employee>
+    </department>
     
-    <dep:department name="Công nghệ thông tin">
-        <hr:employee id="E003">
-            <hr:name>Lê Hoàng C</hr:name>
-            <hr:position>Trưởng phòng IT</hr:position>
-        </hr:employee>
-        <hr:employee id="E004">
-            <hr:name>Phạm Minh D</hr:name>
-            <hr:position>Lập trình viên Senior</hr:position>
-        </hr:employee>
-        <hr:employee id="E005">
-            <hr:name>Hoàng Thị E</hr:name>
-            <hr:position>Lập trình viên Junior</hr:position>
-        </hr:employee>
-    </dep:department>
+    <department name="Công nghệ thông tin">
+        <employee id="E003">
+            <name>Lê Hoàng C</name>
+            <position>Trưởng phòng IT</position>
+        </employee>
+        <employee id="E004">
+            <name>Phạm Minh D</name>
+            <position>Lập trình viên Senior</position>
+        </employee>
+        <employee id="E005">
+            <name>Hoàng Thị E</name>
+            <position>Lập trình viên Junior</position>
+        </employee>
+    </department>
     
-    <dep:department name="Marketing">
-        <hr:employee id="E006">
-            <hr:name>Võ Thành F</hr:name>
-            <hr:position>Marketing Manager</hr:position>
-        </hr:employee>
-    </dep:department>
+    <department name="Marketing">
+        <employee id="E006">
+            <name>Võ Thành F</name>
+            <position>Marketing Manager</position>
+        </employee>
+    </department>
 </company>

@@ -1,75 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hospital xmlns="http://example.com/hospital"
-          xmlns:pat="http://example.com/patient"
-          xmlns:doc="http://example.com/doctor"
-          xmlns:app="http://example.com/appointment">
+<!DOCTYPE hospital SYSTEM "benhvien.dtd">
+<hospital>
 
-    <app:appointment id="A001" date="2025-03-05" status="Đã khám">
-        <pat:patient id="P001">
-            <pat:name>Nguyễn Văn A</pat:name>
-            <pat:dob>1990-07-15</pat:dob>
-            <pat:phone>0901234567</pat:phone>
-            <pat:address>123 Nguyễn Trãi, Cái Khế, TP.Cần Thơ</pat:address>
-        </pat:patient>
-        <doc:doctor id="D001">
-            <doc:name>Trần Thị B</doc:name>
-            <doc:specialty>Nội khoa</doc:specialty>
-            <doc:phone>0987654321</doc:phone>
-        </doc:doctor>
-        <app:diagnosis>Cảm cúm thông thường</app:diagnosis>
-        <app:treatment>Nghỉ ngơi, uống nhiều nước, thuốc hạ sốt</app:treatment>
-        <app:fee>300000</app:fee>
-    </app:appointment>
+    <appointment id="A001" date="2025-03-05" status="Đã khám">
+        <patient id="P001">
+            <name>Nguyễn Văn A</name>
+            <dob>1990-07-15</dob>
+            <phone>0901234567</phone>
+            <address>123 Nguyễn Trãi, Cái Khế, TP.Cần Thơ</address>
+        </patient>
+        <doctor id="D001">
+            <name>Trần Thị B</name>
+            <specialty>Nội khoa</specialty>
+            <phone>0987654321</phone>
+        </doctor>
+        <diagnosis>Cảm cúm thông thường</diagnosis>
+        <treatment>Nghỉ ngơi, uống nhiều nước, thuốc hạ sốt</treatment>
+        <fee>300000</fee>
+    </appointment>
     
-    <app:appointment id="A002" date="2025-03-06" status="Chưa khám">
-        <pat:patient id="P002">
-            <pat:name>Lê Thị C</pat:name>
-            <pat:dob>1985-12-20</pat:dob>
-            <pat:phone>0912345678</pat:phone>
-            <pat:address>456 Lê Lai, Bình Thủy, TP.Cần Thơ</pat:address>
-        </pat:patient>
-        <doc:doctor id="D002">
-            <doc:name>Phạm Minh D</doc:name>
-            <doc:specialty>Tai Mũi Họng</doc:specialty>
-            <doc:phone>0976543210</doc:phone>
-        </doc:doctor>
-        <app:diagnosis></app:diagnosis>
-        <app:treatment></app:treatment>
-        <app:fee>350000</app:fee>
-    </app:appointment>
+    <appointment id="A002" date="2025-03-06" status="Chưa khám">
+        <patient id="P002">
+            <name>Lê Thị C</name>
+            <dob>1985-12-20</dob>
+            <phone>0912345678</phone>
+            <address>456 Lê Lai, Bình Thủy, TP.Cần Thơ</address>
+        </patient>
+        <doctor id="D002">
+            <name>Phạm Minh D</name>
+            <specialty>Tai Mũi Họng</specialty>
+            <phone>0976543210</phone>
+        </doctor>
+        <diagnosis></diagnosis>
+        <treatment></treatment>
+        <fee>350000</fee>
+    </appointment>
     
-    <app:appointment id="A003" date="2025-03-07" status="Đã khám">
-        <pat:patient id="P003">
-            <pat:name>Hoàng Văn E</pat:name>
-            <pat:dob>1995-03-10</pat:dob>
-            <pat:phone>0923456789</pat:phone>
-            <pat:address>789 Võ Văn Tần, Cái Răng, TP.Cần Thơ</pat:address>
-        </pat:patient>
-        <doc:doctor id="D003">
-            <doc:name>Nguyễn Thị F</doc:name>
-            <doc:specialty>Da liễu</doc:specialty>
-            <doc:phone>0965432109</doc:phone>
-        </doc:doctor>
-        <app:diagnosis>Viêm da dị ứng</app:diagnosis>
-        <app:treatment>Thuốc bôi da, tránh tiếp xúc chất gây dị ứng</app:treatment>
-        <app:fee>400000</app:fee>
-    </app:appointment>
+    <appointment id="A003" date="2025-03-07" status="Đã khám">
+        <patient id="P003">
+            <name>Hoàng Văn E</name>
+            <dob>1995-03-10</dob>
+            <phone>0923456789</phone>
+            <address>789 Võ Văn Tần, Cái Răng, TP.Cần Thơ</address>
+        </patient>
+        <doctor id="D003">
+            <name>Nguyễn Thị F</name>
+            <specialty>Da liễu</specialty>
+            <phone>0965432109</phone>
+        </doctor>
+        <diagnosis>Viêm da dị ứng</diagnosis>
+        <treatment>Thuốc bôi da, tránh tiếp xúc chất gây dị ứng</treatment>
+        <fee>400000</fee>
+    </appointment>
     
-    <app:appointment id="A004" date="2025-03-08" status="Chưa khám">
-        <pat:patient id="P004">
-            <pat:name>Võ Thành G</pat:name>
-            <pat:dob>1988-09-25</pat:dob>
-            <pat:phone>0934567890</pat:phone>
-            <pat:address>321 Hai Bà Trưng, Bình Thủy, TP.Cần Thơ</pat:address>
-        </pat:patient>
-        <doc:doctor id="D001">
-            <doc:name>Trần Thị B</doc:name>
-            <doc:specialty>Nội khoa</doc:specialty>
-            <doc:phone>0987654321</doc:phone>
-        </doc:doctor>
-        <app:diagnosis></app:diagnosis>
-        <app:treatment></app:treatment>
-        <app:fee>300000</app:fee>
-    </app:appointment>
+    <appointment id="A004" date="2025-03-08" status="Chưa khám">
+        <patient id="P004">
+            <name>Võ Thành G</name>
+            <dob>1988-09-25</dob>
+            <phone>0934567890</phone>
+            <address>321 Hai Bà Trưng, Bình Thủy, TP.Cần Thơ</address>
+        </patient>
+        <doctor id="D001">
+            <name>Trần Thị B</name>
+            <specialty>Nội khoa</specialty>
+            <phone>0987654321</phone>
+        </doctor>
+        <diagnosis></diagnosis>
+        <treatment></treatment>
+        <fee>300000</fee>
+    </appointment>
 
 </hospital>

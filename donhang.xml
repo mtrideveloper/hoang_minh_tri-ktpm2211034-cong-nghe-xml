@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<orders xmlns:order="http://company.com/order" xmlns:prod="http://company.com/product">
-    <order:order id="O001" customer="Nguyễn Văn A" date="2025-03-02">
-        <prod:item id="P001" quantity="2" price="500000">
-            <prod:name>Điện thoại Samsung Galaxy</prod:name>
-            <prod:description>Smartphone Android tầm trung</prod:description>
-        </prod:item>
-        <prod:item id="P002" quantity="1" price="25000000">
-            <prod:name>Laptop Dell Inspiron</prod:name>
-            <prod:description>Laptop văn phòng hiệu suất cao</prod:description>
-        </prod:item>
-        <order:total_amount>26000000</order:total_amount>
-        <order:payment_method>Thẻ tín dụng</order:payment_method>
-    </order:order>
+<!DOCTYPE orders SYSTEM "donhang.dtd">
+<orders>
+    <order id="O001" customer="Nguyễn Văn A" date="2025-03-02">
+        <item id="P001" quantity="2" price="500000">
+            <name>Điện thoại Samsung Galaxy</name>
+            <description>Smartphone Android tầm trung</description>
+        </item>
+        <item id="P002" quantity="1" price="25000000">
+            <name>Laptop Dell Inspiron</name>
+            <description>Laptop văn phòng hiệu suất cao</description>
+        </item>
+        <total_amount>26000000</total_amount>
+        <payment_method>Thẻ tín dụng</payment_method>
+    </order>
     
-    <order:order id="O002" customer="Trần Thị B" date="2025-03-03">
-        <prod:item id="P003" quantity="3" price="150000">
-            <prod:name>Tai nghe Bluetooth</prod:name>
-            <prod:description>Tai nghe không dây chất lượng cao</prod:description>
-        </prod:item>
-        <prod:item id="P004" quantity="1" price="800000">
-            <prod:name>Ổ cứng SSD 1TB</prod:name>
-            <prod:description>Ổ cứng thể rắn tốc độ cao</prod:description>
-        </prod:item>
-        <prod:item id="P005" quantity="2" price="200000">
-            <prod:name>Chuột gaming</prod:name>
-            <prod:description>Chuột chơi game chuyên nghiệp</prod:description>
-        </prod:item>
-        <order:total_amount>1650000</order:total_amount>
-        <order:payment_method>Chuyển khoản</order:payment_method>
-    </order:order>
+    <order id="O002" customer="Trần Thị B" date="2025-03-03">
+        <item id="P003" quantity="3" price="150000">
+            <name>Tai nghe Bluetooth</name>
+            <description>Tai nghe không dây chất lượng cao</description>
+        </item>
+        <item id="P004" quantity="1" price="800000">
+            <name>Ổ cứng SSD 1TB</name>
+            <description>Ổ cứng thể rắn tốc độ cao</description>
+        </item>
+        <item id="P005" quantity="2" price="200000">
+            <name>Chuột gaming</name>
+            <description>Chuột chơi game chuyên nghiệp</description>
+        </item>
+        <total_amount>1650000</total_amount>
+        <payment_method>Chuyển khoản</payment_method>
+    </order>
     
-    <order:order id="O003" customer="Lê Hoàng C" date="2025-03-04">
-        <prod:item id="P006" quantity="1" price="12000000">
-            <prod:name>Máy ảnh Canon EOS</prod:name>
-            <prod:description>Máy ảnh DSLR chuyên nghiệp</prod:description>
-        </prod:item>
-        <order:total_amount>12000000</order:total_amount>
-        <order:payment_method>Tiền mặt</order:payment_method>
-    </order:order>
+    <order id="O003" customer="Lê Hoàng C" date="2025-03-04">
+        <item id="P006" quantity="1" price="12000000">
+            <name>Máy ảnh Canon EOS</name>
+            <description>Máy ảnh DSLR chuyên nghiệp</description>
+        </item>
+        <total_amount>12000000</total_amount>
+        <payment_method>Tiền mặt</payment_method>
+    </order>
 </orders>

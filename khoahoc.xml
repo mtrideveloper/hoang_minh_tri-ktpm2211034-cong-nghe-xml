@@ -1,75 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<elearning xmlns:course="http://example.com/course"
-           xmlns:instructor="http://example.com/instructor"
-           xmlns:student="http://example.com/student">
+<!DOCTYPE elearning SYSTEM "khoahoc.dtd">
+<elearning>
     
-    <course:course id="C001" category="Lập trình">
-        <course:title>Python cơ bản</course:title>
-        <course:duration>40 giờ</course:duration>
-        <course:price>2000000</course:price>
-        <instructor:instructor id="I001">
-            <instructor:name>Nguyễn Văn A</instructor:name>
-            <instructor:email>nguyenvana@example.com</instructor:email>
-            <instructor:experience>5 năm</instructor:experience>
-        </instructor:instructor>
-        <course:students>
-            <student:student id="S001" progress="80">
-                <student:name>Trần Thị B</student:name>
-                <student:email>tranthib@gmail.com</student:email>
-                <student:join_date>2025-01-15</student:join_date>
-            </student:student>
-            <student:student id="S002" progress="50">
-                <student:name>Hoàng Minh C</student:name>
-                <student:email>hoangminhc@gmail.com</student:email>
-                <student:join_date>2025-02-01</student:join_date>
-            </student:student>
-            <student:student id="S003" progress="95">
-                <student:name>Lê Thị D</student:name>
-                <student:email>lethid@gmail.com</student:email>
-                <student:join_date>2025-01-10</student:join_date>
-            </student:student>
-        </course:students>
-    </course:course>
+    <course id="C001" category="Lập trình">
+        <title>Python cơ bản</title>
+        <duration>40 giờ</duration>
+        <price>2000000</price>
+        <instructor id="I001">
+            <name>Nguyễn Văn A</name>
+            <email>nguyenvana@example.com</email>
+            <experience>5 năm</experience>
+        </instructor>
+        <students>
+            <student id="S001" progress="80">
+                <name>Trần Thị B</name>
+                <email>tranthib@gmail.com</email>
+                <join_date>2025-01-15</join_date>
+            </student>
+            <student id="S002" progress="50">
+                <name>Hoàng Minh C</name>
+                <email>hoangminhc@gmail.com</email>
+                <join_date>2025-02-01</join_date>
+            </student>
+            <student id="S003" progress="95">
+                <name>Lê Thị D</name>
+                <email>lethid@gmail.com</email>
+                <join_date>2025-01-10</join_date>
+            </student>
+        </students>
+    </course>
     
-    <course:course id="C002" category="Thiết kế">
-        <course:title>Adobe Photoshop nâng cao</course:title>
-        <course:duration>30 giờ</course:duration>
-        <course:price>1500000</course:price>
-        <instructor:instructor id="I002">
-            <instructor:name>Phạm Thị E</instructor:name>
-            <instructor:email>phamthie@example.com</instructor:email>
-            <instructor:experience>8 năm</instructor:experience>
-        </instructor:instructor>
-        <course:students>
-            <student:student id="S004" progress="70">
-                <student:name>Võ Thanh F</student:name>
-                <student:email>vothanhf@gmail.com</student:email>
-                <student:join_date>2025-02-15</student:join_date>
-            </student:student>
-            <student:student id="S005" progress="85">
-                <student:name>Đặng Minh G</student:name>
-                <student:email>dangminhg@gmail.com</student:email>
-                <student:join_date>2025-01-20</student:join_date>
-            </student:student>
-        </course:students>
-    </course:course>
+    <course id="C002" category="Thiết kế">
+        <title>Adobe Photoshop nâng cao</title>
+        <duration>30 giờ</duration>
+        <price>1500000</price>
+        <instructor id="I002">
+            <name>Phạm Thị E</name>
+            <email>phamthie@example.com</email>
+            <experience>8 năm</experience>
+        </instructor>
+        <students>
+            <student id="S004" progress="70">
+                <name>Võ Thanh F</name>
+                <email>vothanhf@gmail.com</email>
+                <join_date>2025-02-15</join_date>
+            </student>
+            <student id="S005" progress="85">
+                <name>Đặng Minh G</name>
+                <email>dangminhg@gmail.com</email>
+                <join_date>2025-01-20</join_date>
+            </student>
+        </students>
+    </course>
     
-    <course:course id="C003" category="Marketing">
-        <course:title>Digital Marketing từ A-Z</course:title>
-        <course:duration>50 giờ</course:duration>
-        <course:price>2500000</course:price>
-        <instructor:instructor id="I003">
-            <instructor:name>Trịnh Văn H</instructor:name>
-            <instructor:email>trinhvanh@example.com</instructor:email>
-            <instructor:experience>10 năm</instructor:experience>
-        </instructor:instructor>
-        <course:students>
-            <student:student id="S006" progress="30">
-                <student:name>Bùi Thị I</student:name>
-                <student:email>buithii@gmail.com</student:email>
-                <student:join_date>2025-02-28</student:join_date>
-            </student:student>
-        </course:students>
-    </course:course>
+    <course id="C003" category="Marketing">
+        <title>Digital Marketing từ A-Z</title>
+        <duration>50 giờ</duration>
+        <price>2500000</price>
+        <instructor id="I003">
+            <name>Trịnh Văn H</name>
+            <email>trinhvanh@example.com</email>
+            <experience>10 năm</experience>
+        </instructor>
+        <students>
+            <student id="S006" progress="30">
+                <name>Bùi Thị I</name>
+                <email>buithii@gmail.com</email>
+                <join_date>2025-02-28</join_date>
+            </student>
+        </students>
+    </course>
     
 </elearning>
