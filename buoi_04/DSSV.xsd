@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="DSSV">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Phần tử QUANLY -->
+                <xs:element name="QUANLY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MA" type="MA_TYPE"/>
+                            <xs:element name="TEN" type="TEN_TYPE"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Phần tử LOP -->
+                <xs:element name="LOP">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MA" type="MA_TYPE"/>
+                            <xs:element name="TEN" type="TEN_LOP_TYPE"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Danh sách SINHVIEN -->
+                <xs:element name="SINHVIEN" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MSSV" type="MSSV_TYPE"/>
+                            <xs:element name="TEN" type="TEN_TYPE"/>
+                            <xs:element name="EMAIL" type="xs:string"/>
+                            <xs:element name="DIACHI" type="xs:string"/>
+                            <xs:element name="SDT" type="SDT_TYPE"/>
+                            <xs:element name="MALOP" type="MA_TYPE"/>
+                            <xs:element name="MAQUANLY" type="MA_TYPE"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        
+        <!-- Định nghĩa các ràng buộc khóa -->
+        <xs:key name="PK_QUANLY">
+            <xs:selector xpath="QUANLY"/>
+            <xs:field xpath="MA"/>
+        </xs:key>
+        
+        <xs:key name="PK_LOP">
+            <xs:selector xpath="LOP"/>
+            <xs:field xpath="MA"/>
+        </xs:key>
+        
+        <xs:key name="PK_SINHVIEN">
+            <xs:selector xpath="SINHVIEN"/>
+            <xs:field xpath="MSSV"/>
+        </xs:key>
+        
+        <!-- Định nghĩa các khóa ngoại -->
+        <xs:keyref name="FK_SINHVIEN_LOP" refer="PK_LOP">
+            <xs:selector xpath="SINHVIEN"/>
+            <xs:field xpath="MALOP"/>
+        </xs:keyref>
+        
+        <xs:keyref name="FK_SINHVIEN_QUANLY" refer="PK_QUANLY">
+            <xs:selector xpath="SINHVIEN"/>
+            <xs:field xpath="MAQUANLY"/>
+        </xs:keyref>
+    </xs:element>
+
+    <!-- Định nghĩa các kiểu dữ liệu tùy chỉnh -->
+    <xs:simpleType name="MA_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z0-9]{3,10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="MSSV_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="SV[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TEN_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="150"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TEN_LOP_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="SDT_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

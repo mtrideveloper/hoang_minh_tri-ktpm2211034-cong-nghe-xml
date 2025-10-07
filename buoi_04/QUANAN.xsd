@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.quanan.edu.vn"
+           xmlns="http://www.quanan.edu.vn"
+           elementFormDefault="qualified">
+
+    <!-- Phần tử gốc QUANAN -->
+    <xs:element name="QUANAN">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Danh sách BAN -->
+                <xs:element name="BAN" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SOBAN" type="SOBAN_TYPE"/>
+                            <xs:element name="TENBAN" type="TENBAN_TYPE"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Danh sách MON -->
+                <xs:element name="MON" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MAMON" type="MAMON_TYPE"/>
+                            <xs:element name="TENMON" type="TENMON_TYPE"/>
+                            <xs:element name="GIA" type="GIA_TYPE"/>
+                            <xs:element name="HINHANH" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Danh sách NHANVIEN -->
+                <xs:element name="NHANVIEN" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="MANV" type="MANV_TYPE"/>
+                            <xs:element name="TENNV" type="TENNV_TYPE"/>
+                            <xs:element name="SDT" type="SDT_TYPE"/>
+                            <xs:element name="DIACHI" type="xs:string"/>
+                            <xs:element name="GIOITINH" type="GIOITINH_TYPE"/>
+                            <xs:element name="USERNAME" type="USERNAME_TYPE"/>
+                            <xs:element name="PASSWORD" type="PASSWORD_TYPE"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Danh sách HOADON -->
+                <xs:element name="HOADON" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SOHD" type="SOHD_TYPE"/>
+                            <xs:element name="NGAYLAP" type="xs:date"/>
+                            <xs:element name="TONGTIEN" type="GIA_TYPE"/>
+                            <xs:element name="SOBAN_THUOC" type="SOBAN_TYPE"/>
+                            <xs:element name="MANV_LAP" type="MANV_TYPE"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Danh sách SOLUONG -->
+                <xs:element name="SOLUONG" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SOHD_THUOC" type="SOHD_TYPE"/>
+                            <xs:element name="MAMON_THUOC" type="MAMON_TYPE"/>
+                            <xs:element name="SOLUONG" type="xs:integer"/>
+                            <xs:element name="THANHTIEN" type="GIA_TYPE"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        
+        <!-- Định nghĩa khóa chính -->
+        <xs:key name="PK_BAN">
+            <xs:selector xpath="BAN"/>
+            <xs:field xpath="SOBAN"/>
+        </xs:key>
+        
+        <xs:key name="PK_MON">
+            <xs:selector xpath="MON"/>
+            <xs:field xpath="MAMON"/>
+        </xs:key>
+        
+        <xs:key name="PK_NHANVIEN">
+            <xs:selector xpath="NHANVIEN"/>
+            <xs:field xpath="MANV"/>
+        </xs:key>
+        
+        <xs:key name="PK_HOADON">
+            <xs:selector xpath="HOADON"/>
+            <xs:field xpath="SOHD"/>
+        </xs:key>
+        
+        <xs:key name="PK_SOLUONG">
+            <xs:selector xpath="SOLUONG"/>
+            <xs:field xpath="SOHD_THUOC"/>
+            <xs:field xpath="MAMON_THUOC"/>
+        </xs:key>
+        
+        <!-- Định nghĩa khóa ngoại -->
+        <xs:keyref name="FK_HOADON_BAN" refer="PK_BAN">
+            <xs:selector xpath="HOADON"/>
+            <xs:field xpath="SOBAN_THUOC"/>
+        </xs:keyref>
+        
+        <xs:keyref name="FK_HOADON_NHANVIEN" refer="PK_NHANVIEN">
+            <xs:selector xpath="HOADON"/>
+            <xs:field xpath="MANV_LAP"/>
+        </xs:keyref>
+        
+        <xs:keyref name="FK_SOLUONG_HOADON" refer="PK_HOADON">
+            <xs:selector xpath="SOLUONG"/>
+            <xs:field xpath="SOHD_THUOC"/>
+        </xs:keyref>
+        
+        <xs:keyref name="FK_SOLUONG_MON" refer="PK_MON">
+            <xs:selector xpath="SOLUONG"/>
+            <xs:field xpath="MAMON_THUOC"/>
+        </xs:keyref>
+    </xs:element>
+
+    <!-- Định nghĩa các kiểu dữ liệu tùy chỉnh -->
+    <xs:simpleType name="SOBAN_TYPE">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TENBAN_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="MAMON_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="MON[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TENMON_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="GIA_TYPE">
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="MANV_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="NV[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TENNV_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="SDT_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="GIOITINH_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Nam"/>
+            <xs:enumeration value="Nữ"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="USERNAME_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="PASSWORD_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="10"/>
+            <xs:maxLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="SOHD_TYPE">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSSV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="DSSV.xsd">
+    
+    <QUANLY>
+        <MA>QL001</MA>
+        <TEN>Nguyễn Văn A</TEN>
+    </QUANLY>
+    
+    <LOP>
+        <MA>CTK44</MA>
+        <TEN>Công nghệ thông tin K44</TEN>
+    </LOP>
+    
+    <SINHVIEN>
+        <MSSV>SV001</MSSV>
+        <TEN>Trần Thị B</TEN>
+        <EMAIL>sv001@student.edu.vn</EMAIL>
+        <DIACHI>123 Đường ABC, Quận 1, TP.HCM</DIACHI>
+        <SDT>0912345678</SDT>
+        <MALOP>CTK44</MALOP>
+        <MAQUANLY>QL001</MAQUANLY>
+    </SINHVIEN>
+    
+    <SINHVIEN>
+        <MSSV>SV002</MSSV>
+        <TEN>Lê Văn C</TEN>
+        <EMAIL>sv002@student.edu.vn</EMAIL>
+        <DIACHI>456 Đường XYZ, Quận 2, TP.HCM</DIACHI>
+        <SDT>0987654321</SDT>
+        <MALOP>CTK44</MALOP>
+        <MAQUANLY>QL001</MAQUANLY>
+    </SINHVIEN>
+</DSSV>
