@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QUANAN xmlns="http://www.quanan.edu.vn"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.quanan.edu.vn QUANAN.xsd">
+        xsi:schemaLocation="http://www.quanan.edu.vn quanlybanan.xsd">
     
     <!-- Danh sách bàn -->
     <BAN>
@@ -27,31 +27,31 @@
     
     <!-- Danh sách món ăn -->
     <MON>
-        <MAMON>MON001</MAMON>
+        <MAMON>M01</MAMON>
         <TENMON>Phở bò</TENMON>
         <GIA>45000</GIA>
         <HINHANH>pho_bo.jpg</HINHANH>
     </MON>
     <MON>
-        <MAMON>MON002</MAMON>
+        <MAMON>M02</MAMON>
         <TENMON>Bún chả</TENMON>
         <GIA>40000</GIA>
         <HINHANH>bun_cha.jpg</HINHANH>
     </MON>
     <MON>
-        <MAMON>MON003</MAMON>
+        <MAMON>M03</MAMON>
         <TENMON>Cơm gà</TENMON>
         <GIA>35000</GIA>
         <HINHANH>com_ga.jpg</HINHANH>
     </MON>
     <MON>
-        <MAMON>MON004</MAMON>
+        <MAMON>M04</MAMON>
         <TENMON>Bánh mì</TENMON>
         <GIA>20000</GIA>
         <HINHANH>banh_mi.jpg</HINHANH>
     </MON>
     <MON>
-        <MAMON>MON005</MAMON>
+        <MAMON>M05</MAMON>
         <TENMON>Gỏi cuốn</TENMON>
         <GIA>30000</GIA>
         <HINHANH>goi_cuon.jpg</HINHANH>
@@ -59,7 +59,7 @@
     
     <!-- Danh sách nhân viên -->
     <NHANVIEN>
-        <MANV>NV001</MANV>
+        <MANV>NV01</MANV>
         <TENNV>Nguyễn Văn An</TENNV>
         <SDT>0912345678</SDT>
         <DIACHI>123 Nguyễn Trãi, Q.1, TP.HCM</DIACHI>
@@ -68,7 +68,7 @@
         <PASSWORD>password1234</PASSWORD>
     </NHANVIEN>
     <NHANVIEN>
-        <MANV>NV002</MANV>
+        <MANV>NV02</MANV>
         <TENNV>Trần Thị Bình</TENNV>
         <SDT>0987654321</SDT>
         <DIACHI>456 Lê Lợi, Q.3, TP.HCM</DIACHI>
@@ -77,7 +77,7 @@
         <PASSWORD>securepass5678</PASSWORD>
     </NHANVIEN>
     <NHANVIEN>
-        <MANV>NV003</MANV>
+        <MANV>NV03</MANV>
         <TENNV>Lê Văn Cường</TENNV>
         <SDT>0978123456</SDT>
         <DIACHI>789 Pasteur, Q.1, TP.HCM</DIACHI>
@@ -86,7 +86,7 @@
         <PASSWORD>mypassword999</PASSWORD>
     </NHANVIEN>
     <NHANVIEN>
-        <MANV>NV004</MANV>
+        <MANV>NV04</MANV>
         <TENNV>Phạm Thị Dung</TENNV>
         <SDT>0966789123</SDT>
         <DIACHI>321 CMT8, Q.10, TP.HCM</DIACHI>
@@ -95,7 +95,7 @@
         <PASSWORD>strongpass123</PASSWORD>
     </NHANVIEN>
     <NHANVIEN>
-        <MANV>NV005</MANV>
+        <MANV>NV05</MANV>
         <TENNV>Hoàng Văn Em</TENNV>
         <SDT>0945123789</SDT>
         <DIACHI>654 Hai Bà Trưng, Q.1, TP.HCM</DIACHI>
@@ -106,69 +106,69 @@
     
     <!-- Danh sách hóa đơn -->
     <HOADON>
-        <SOHD>1001</SOHD>
+        <SOHD>HD01</SOHD>
         <NGAYLAP>2024-01-15</NGAYLAP>
         <TONGTIEN>120000</TONGTIEN>
         <SOBAN_THUOC>1</SOBAN_THUOC>
-        <MANV_LAP>NV001</MANV_LAP>
+        <MANV_LAP>NV01</MANV_LAP>
     </HOADON>
     <HOADON>
-        <SOHD>1002</SOHD>
+        <SOHD>HD02</SOHD>
         <NGAYLAP>2024-01-15</NGAYLAP>
         <TONGTIEN>85000</TONGTIEN>
         <SOBAN_THUOC>2</SOBAN_THUOC>
-        <MANV_LAP>NV002</MANV_LAP>
+        <MANV_LAP>NV02</MANV_LAP>
     </HOADON>
     <HOADON>
-        <SOHD>1003</SOHD>
+        <SOHD>HD03</SOHD>
         <NGAYLAP>2024-01-16</NGAYLAP>
         <TONGTIEN>200000</TONGTIEN>
         <SOBAN_THUOC>3</SOBAN_THUOC>
-        <MANV_LAP>NV001</MANV_LAP>
+        <MANV_LAP>NV01</MANV_LAP>
     </HOADON>
     <HOADON>
-        <SOHD>1004</SOHD>
+        <SOHD>HD04</SOHD>
         <NGAYLAP>2024-01-16</NGAYLAP>
         <TONGTIEN>65000</TONGTIEN>
         <SOBAN_THUOC>4</SOBAN_THUOC>
-        <MANV_LAP>NV003</MANV_LAP>
+        <MANV_LAP>NV03</MANV_LAP>
     </HOADON>
     <HOADON>
-        <SOHD>1005</SOHD>
+        <SOHD>HD05</SOHD>
         <NGAYLAP>2024-01-17</NGAYLAP>
         <TONGTIEN>150000</TONGTIEN>
         <SOBAN_THUOC>5</SOBAN_THUOC>
-        <MANV_LAP>NV002</MANV_LAP>
+        <MANV_LAP>NV02</MANV_LAP>
     </HOADON>
     
     <!-- Chi tiết hóa đơn (SOLUONG) -->
     <SOLUONG>
-        <SOHD_THUOC>1001</SOHD_THUOC>
-        <MAMON_THUOC>MON001</MAMON_THUOC>
+        <SOHD_THUOC>HD01</SOHD_THUOC>
+        <MAMON_THUOC>M01</MAMON_THUOC>
         <SOLUONG>2</SOLUONG>
         <THANHTIEN>90000</THANHTIEN>
     </SOLUONG>
     <SOLUONG>
-        <SOHD_THUOC>1001</SOHD_THUOC>
-        <MAMON_THUOC>MON004</MAMON_THUOC>
+        <SOHD_THUOC>HD01</SOHD_THUOC>
+        <MAMON_THUOC>M04</MAMON_THUOC>
         <SOLUONG>1</SOLUONG>
         <THANHTIEN>20000</THANHTIEN>
     </SOLUONG>
     <SOLUONG>
-        <SOHD_THUOC>1002</SOHD_THUOC>
-        <MAMON_THUOC>MON002</MAMON_THUOC>
+        <SOHD_THUOC>HD02</SOHD_THUOC>
+        <MAMON_THUOC>M02</MAMON_THUOC>
         <SOLUONG>1</SOLUONG>
         <THANHTIEN>40000</THANHTIEN>
     </SOLUONG>
     <SOLUONG>
-        <SOHD_THUOC>1002</SOHD_THUOC>
-        <MAMON_THUOC>MON005</MAMON_THUOC>
+        <SOHD_THUOC>HD02</SOHD_THUOC>
+        <MAMON_THUOC>M05</MAMON_THUOC>
         <SOLUONG>1</SOLUONG>
         <THANHTIEN>30000</THANHTIEN>
     </SOLUONG>
     <SOLUONG>
-        <SOHD_THUOC>1003</SOHD_THUOC>
-        <MAMON_THUOC>MON001</MAMON_THUOC>
+        <SOHD_THUOC>HD03</SOHD_THUOC>
+        <MAMON_THUOC>M01</MAMON_THUOC>
         <SOLUONG>3</SOLUONG>
         <THANHTIEN>135000</THANHTIEN>
     </SOLUONG>

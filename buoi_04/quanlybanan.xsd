@@ -136,7 +136,7 @@
     
     <xs:simpleType name="MAMON_TYPE">
         <xs:restriction base="xs:string">
-            <xs:pattern value="MON[0-9]{3}"/>
+            <xs:pattern value="M[0-9]{2}"/>
         </xs:restriction>
     </xs:simpleType>
     
@@ -154,7 +154,7 @@
     
     <xs:simpleType name="MANV_TYPE">
         <xs:restriction base="xs:string">
-            <xs:pattern value="NV[0-9]{3}"/>
+            <xs:pattern value="NV[0-9]{2}"/>
         </xs:restriction>
     </xs:simpleType>
     
@@ -192,8 +192,8 @@
     </xs:simpleType>
     
     <xs:simpleType name="SOHD_TYPE">
-        <xs:restriction base="xs:integer">
-            <xs:minInclusive value="1000"/>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="HD[0-9]{2}"/>
         </xs:restriction>
     </xs:simpleType>
 
