@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<school>
+    <student>
+        <id>SV01</id>
+        <name>Nguyễn Thị Thanh Thúy</name>
+        <date>1997-12-20</date>
+        <gender>Nữ</gender>
+    </student>
+    <student>
+        <id>SV02</id>
+        <name>Lê Thị Hồng Cẩm</name>
+        <date>1998-01-21</date>
+        <gender>Nữ</gender>
+    </student>
+    <student>
+        <id>SV03</id>
+        <name>Lê Thị Hồng Cẩm</name>
+        <date>1997-11-11</date>
+        <gender>Nữ</gender>
+    </student>
+    <student>
+        <id>SV04</id>
+        <name>Trần Văn An</name>
+        <date>1996-05-15</date>
+        <gender>Nam</gender>
+    </student>
+    <student>
+        <id>SV05</id>
+        <name>Phạm Thị Bích</name>
+        <date>1999-03-30</date>
+        <gender>Nữ</gender>
+    </student>
+    <enrollment>
+        <studentRef>SV01</studentRef>
+        <course>Toan101</course>
+        <semester>2023-1</semester>
+    </enrollment>
+    <enrollment>
+        <studentRef>SV02</studentRef>
+        <course>Vatly203</course>
+        <semester>2023-1</semester>
+    </enrollment>
+    <enrollment>
+        <studentRef>SV03</studentRef>
+        <course>Vatly203</course>
+        <semester>2023-1</semester>
+    </enrollment>
+    <enrollment>
+        <studentRef>SV01</studentRef>
+        <course>Hoa202</course>
+        <semester>2023-2</semester>
+    </enrollment>
+    <enrollment>
+        <studentRef>SV04</studentRef>
+        <course>Toan101</course>
+        <semester>2023-1</semester>
+    </enrollment>
+</school>
